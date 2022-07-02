@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collage</title>
+    <script src="https://kit.fontawesome.com/e48d1beca8.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+        #K {
+            text-align: center;
+            color: aliceblue;
+        }
+        body {
+            background-color: #F67280;
+            font-family: 'Inspiration', cursive;
+        }
+        
+        #list {
+            color: aliceblue;
+            font-family: 'Fredoka', sans-serif;
+            text-align: center;
+        }
+        #song {
+            align-self: center;
+            display: inline;
+        }
+        ul {
+            color: aliceblue;
+            font-family: 'Fredoka', sans-serif;
+            margin-right: 20px;
+            display: inline;
+        }
+        #max {
+            text-align: center;
+        }
+        #logo {
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .logos_2 {
+            border-radius: 3%;
+            position: relative;
+            margin-left: 55px;
+            top: 0;
+            left: 0;
+        }
+        .Play_red {
+            position: absolute;
+            cursor: pointer;
+            top: -35px;
+            left: 200px;
+            height: 40px;
+        }
+        .list_bg {
+            display: inline;
+        }
+        #OP {
+            font-family: 'Grape Nuts', cursive;
+            font-size: 35px;
+            color: aliceblue;
+            text-align: center;
+            position: fixed;  
+            left: 0px;  
+            bottom: 5px;
+            right: 0px;
+        }
+        .pause_red{
+            position: absolute;
+            cursor: pointer;
+            top: -35px;
+            left: 200px;
+            height: 40px;
+        }
+        </style>
+</head>
+<body>
+    <h1 id="K">
+        Study Mood
+    </h1>
+    <p id="list">
+    <ul>
+        <div id="max">
+            <ul>Chill</ul>
+            <ul>Sed</ul>
+            <ul>Fun</ul>
+            <ul>Study</ul>
+            <ul>Sleep</ul>
+        </div>
+    </ul>
+    </p>
+    <div id="song_thumb">
+        <div id="chill_thumb" style="position: relative; left: 0; top: 0;" class="list_bg">
+            <img src="Chillx.gif" height="200px" id="chill_img" class="logos_2">
+            <img src="icons8-play-button-circled-48.png" alt="" id="chill_1" class="Play_red">
+        </div>
+        <div id="sad_thumb" style="position: relative; left: 0; top: 0;" class="list_bg">
+            <img src="pixel-jeff-spotify1-v2.gif" height="200px" id="Sad_img" class="logos_2">
+            <img src="icons8-play-button-circled-96 - Copy.png" id=sad_1 class="Play_red">
+        </div>
+        <div id="fun_thumb" style="position: relative; left: 0; top: 0;" class="list_bg">
+            <img src="fun toon.gif" height="200px" id="fun_img" class="logos_2">
+            <img src="icons8-play-button-circled-96 - Copy (2).png" id=fun_1 class="Play_red">
+        </div>
+        <div id="study_thumb" style="position: relative; left: 0; top: 0;" class="list_bg">
+            <img src="study next.gif" id="study_img" height="200px" width="200px" class="logos_2">
+            <img src="icons8-play-button-circled-96 - Copy (3).png" id=study_1 class="Play_red">
+        </div>
+        <div id="sleep_thumb" style="position: relative; left: 0; top: 0;" class="list_bg">
+            <img src="pixel-jeff-dream2.gif" height="200px" id="sleep_img" class="logos_2">
+            <img src="icons8-play-button-circled-96 - Copy (4).png" id=sleep_1 class="Play_red">
+        </div>
+    </div>
+    <div id="Song1">
+        <audio src="chill_1.mp3" id="S_1" loop></audio>
+        <audio src="sad_1.mp3" id="S_2" loop ></audio>
+        <audio src="fun_1.mp3"id="S_3" loop></audio>
+        <audio src="study_1.mp3" id="S_4" loop></audio>
+        <audio src="sleep_1.mp3" id="S_5" loop></audio>
+    </div>
+    <script>
+        var song1 = document.getElementById("S_1");
+        var logo1 = document.getElementById("chill_1");
+        logo1.onclick = function () {
+            if(song1.paused){
+                song1.play();
+                logo1.src = "imageedit_9_4075395671.png";
+            }
+            else{
+                song1.pause();
+                logo1.src = "icons8-play-button-circled-48.png";
+            }
+        }
+        var song2 = document.getElementById("S_2");
+        var logo2 = document.getElementById("sad_1");
+        logo2.onclick = function () {
+            if(song2.paused){
+                song2.play();
+                logo2.src = "imageedit_9_4075395671 - Copy.png";
+            }
+            else{
+                song2.pause();
+                logo2.src = "icons8-play-button-circled-96 - Copy.png";
+            }
+        }
+        var song3 = document.getElementById("S_3");
+        var logo3 = document.getElementById("fun_1");
+        logo3.onclick = function () {
+            if(song3.paused){
+                song3.play();
+                logo3.src = "imageedit_9_4075395671 - Copy (2).png";
+            }
+            else{
+                song3.pause();
+                logo3.src = "icons8-play-button-circled-96 - Copy (2).png";
+            }
+        }
+        var song4 = document.getElementById("S_4");
+        var logo4 = document.getElementById("study_1");
+        logo4.onclick = function () {
+            if(song4.paused){
+                song4.play();
+                logo4.src = "imageedit_9_4075395671 - Copy (3).png";
+            }
+            else{
+                song4.pause();
+                logo4.src = "icons8-play-button-circled-96 - Copy (3).png";
+            }
+        }
+        var song5 = document.getElementById("S_5");
+        var logo5 = document.getElementById("sleep_1");
+        logo5.onclick = function () {
+            if(song5.paused){
+                song5.play();
+                logo5.src = "imageedit_9_4075395671 - Copy (4).png";
+            }
+            else{
+                song5.pause();
+                logo5.src = "icons8-play-button-circled-96 - Copy (4).png";
+            }
+        }
+    </script>
+</body>
+<footer class="Top">
+    <div id="OP">
+        Creation of God.
+        <img src="kisspng-doodle-drawing-heart-clip-art-5af610735acef7.203151731526075507372.png" height="35px">
+    </div>
+</footer>
+</html>
